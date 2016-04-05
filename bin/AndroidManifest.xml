@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tulshie_kart"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".BuyNowscreen"
+            android:label="@string/app_name"
+            android:parentActivityName=".SigninScreen"
+            android:uiOptions="splitActionBarWhenNarrow" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SigninScreen" />
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SigninScreen" />
+        </activity>
+        <activity
+            android:name=".Buynowclick"
+            android:label="@string/title_activity_buynowclick"
+            android:parentActivityName=".SigninScreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SigninScreen" />
+        </activity>
+        <activity
+            android:name=".Welcomescreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Secondscreen"
+            android:label="@string/title_activity_secondscreen" >
+        </activity>
+        <activity
+            android:name=".SigninScreen"
+            android:label="@string/title_activity_signin_screen" >
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".Secondscreen" />
+        </activity>
+        <activity
+            android:name=".Openingfacebook"
+            android:label="@string/title_activity_openingfacebook"
+            android:parentActivityName=".SigninScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SigninScreen" />
+        </activity>
+        <activity
+            android:name=".Creataccontscreen"
+            android:label="@string/title_activity_creataccontscreen" >
+        </activity>
+        <activity
+            android:name=".Mycart"
+            android:label="@string/title_activity_mycart" >
+        </activity>
+        <activity
+            android:name=".Profile"
+            android:label="@string/title_activity_profile" >
+        </activity>
+    </application>
+
+</manifest>
